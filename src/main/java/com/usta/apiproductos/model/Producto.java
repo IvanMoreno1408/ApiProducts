@@ -26,8 +26,6 @@ public class Producto {
 
     private Double precio;
 
-    private Integer stock;
-
     private String imagenUrl;
 
     private Boolean activo;
