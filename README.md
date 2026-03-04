@@ -1,5 +1,7 @@
 # API Productos
 
+[![Tests](https://github.com/tu-usuario/apiProductos/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/tu-usuario/apiProductos/actions/workflows/test.yml)
+
 API REST para gestión de productos con **Spring Boot 4.0.3**, **Azure SQL Server** e integración con **ImgBB**.
 
 ---
