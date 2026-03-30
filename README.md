@@ -45,9 +45,7 @@ apiProductos/
 
 ##  Swagger/OpenAPI
 
-**Acceso:** `http://localhost:8080/swagger-ui.html`
-
-**JSON Schema:** `http://localhost:8080/v3/api-docs`
+**Acceso:** `https://apiproducto-fnccb2e9g8a8dzak.brazilsouth-01.azurewebsites.net/swagger-ui/index.html`
 
 Todos los endpoints están documentados y son probables desde Swagger UI.
 
