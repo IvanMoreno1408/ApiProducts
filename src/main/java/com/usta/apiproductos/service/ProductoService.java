@@ -1,6 +1,5 @@
 package com.usta.apiproductos.service;
 
-import com.usta.apiproductos.integration.ImgBBService;
 import com.usta.apiproductos.model.Producto;
 import com.usta.apiproductos.repository.ProductoRepository;
 import lombok.RequiredArgsConstructor;
@@ -14,7 +13,6 @@ import java.util.List;
 public class ProductoService {
 
     private final ProductoRepository repository;
-    private final ImgBBService imgBBService;
 
     // LISTAR TODOS
     public List<Producto> listar() {
@@ -28,13 +26,7 @@ public class ProductoService {
     }
 
     // CREAR
-    public Producto guardar(Producto producto, String imagenBase64) {
-
-        if(imagenBase64 != null) {
-            String url = imgBBService.subirImagen(imagenBase64);
-            producto.setImagenUrl(url);
-        }
-
+    public Producto guardar(Producto producto) {
         return repository.save(producto);
     }
 
@@ -47,6 +39,7 @@ public class ProductoService {
         producto.setDescripcion(nuevo.getDescripcion());
         producto.setTipo(nuevo.getTipo());
         producto.setPrecio(nuevo.getPrecio());
+        producto.setImagenUrl(nuevo.getImagenUrl());
         producto.setActivo(nuevo.getActivo());
 
         return repository.save(producto);
